@@ -5,10 +5,35 @@ import Layout from "../components/Layout"
 
 import renderNodes from "./node-renderer"
 
-function Template(props) {
+import { Wrapper, Content, Codebox } from "./style"
+
+function Template({
+  data: {
+    content: { htmlAst },
+  },
+}) {
+  const content = []
+  const codebox = []
+
+  htmlAst.children.map(child => {
+    if (
+      (child.properties &&
+        child.properties.dataLanguage &&
+        child.properties.dataLanguage == "json") ||
+      child.tagName == "blockquote"
+    ) {
+      codebox.push(child)
+      return
+    }
+
+    content.push(child)
+  })
   return (
     <Layout showMenu>
-      <div>{renderNodes(props.data.content.htmlAst.children)}</div>
+      <Wrapper>
+        <Content>{renderNodes(content)}</Content>
+        <Codebox>{renderNodes(codebox)}</Codebox>
+      </Wrapper>
     </Layout>
   )
 }

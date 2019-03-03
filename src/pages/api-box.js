@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 function ApiBox() {
   return (
     <Layout showMenu>
-      <div>hey api box</div>
+      <div style={{ marginLeft: 200 }}>hey api box</div>
     </Layout>
   )
 }
