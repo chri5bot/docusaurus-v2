@@ -1,19 +1,22 @@
 import React from "react"
-
+import { Sticky } from "react-sticky"
 import { Link } from "gatsby"
 
-import { HeaderCustom, Image, Version } from "./style"
+import { HeaderCustom, Image } from "./style"
 
 import logoSkypostal from "../../images/home/skypostal_logo.png"
 
 function Header({ showMenu }) {
   return (
-    <HeaderCustom>
-      <Link to="/">
-        <Image src={logoSkypostal} />
-      </Link>
-      <Version showMenu={showMenu}>V 1.0</Version>
-    </HeaderCustom>
+    <Sticky>
+      {({ style }) => (
+        <HeaderCustom style={style}>
+          <Link to="/">
+            <Image src={logoSkypostal} />
+          </Link>
+        </HeaderCustom>
+      )}
+    </Sticky>
   )
 }
 

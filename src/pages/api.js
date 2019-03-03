@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 
 function Api() {
   return (
-    <Layout showMenu={true}>
+    <Layout showMenu>
       <div>hey</div>
     </Layout>
   )

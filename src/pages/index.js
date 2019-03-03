@@ -9,7 +9,7 @@ import media from "../styles/media"
 import logo from "../images/home/banner_bg_1.png"
 
 const Background = styled.div`
-  height: 100%;
+  height: 88vh;
   display: flex;
   flex-direction: column;
   align-items: center;

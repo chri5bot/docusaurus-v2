@@ -2,21 +2,13 @@ import styled from "styled-components"
 import media from "../../styles/media"
 
 export const HeaderCustom = styled.header`
+  background-color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  padding: 0 10px;
+  justify-content: space-between;
   border-bottom: 1px solid #ccc;
-  height: 12%;
+  padding: 10px;
 `
 export const Image = styled.img`
   width: 100px;
-`
-export const Version = styled.div`
-  font-size: 12px;
-  color: #008de6;
-  padding: 0 1em;
-  margin-right: 20px;
-  ${props => (props.showMenu ? media.md`margin-right: 0` : "margin-right: 0")}
 `

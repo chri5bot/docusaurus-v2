@@ -7,7 +7,7 @@ export const styleResponsive = {
     width: "25px",
     height: "20px",
     right: "10px",
-    top: "28px",
+    top: "30px",
   },
   bmBurgerBars: {
     background: "#008de6",
