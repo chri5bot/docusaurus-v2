@@ -51,8 +51,8 @@ function Home() {
         <MainTitle>Skypostal Developers</MainTitle>
         <SubTitle>Easy to Integrate Logistics API</SubTitle>
         <SectionButton>
-          <Button to="/api">API-BOX</Button>
-          <Button to="/api">API-TEST</Button>
+          <Button to="/api-box">API-BOX</Button>
+          <Button to="/api-test">API-TEST</Button>
         </SectionButton>
       </Background>
     </Layout>
