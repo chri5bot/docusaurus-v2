@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   `}
 `
 
-function ApiTest({ location: { pathname } }) {
+function Api({ location: { pathname } }) {
   return (
     <Layout
       showMenu
@@ -24,4 +24,4 @@ function ApiTest({ location: { pathname } }) {
   )
 }
 
-export default ApiTest
+export default Api

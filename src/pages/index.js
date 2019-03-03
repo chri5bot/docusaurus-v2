@@ -9,14 +9,17 @@ import media from "../styles/media"
 import logo from "../images/home/banner_bg_1.png"
 
 const Background = styled.div`
-  height: 88vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url(${props => props.background});
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
+  ${media.md`
+    height: 90.5vh;
+  `}
 `
 
 const MainTitle = styled.h1`

@@ -6,13 +6,13 @@ import Header from "../Header"
 
 import { GlobalStyle } from "../../styles/reset.css"
 
-function Layout({ children, showMenu }) {
+function Layout({ children, showMenu, routes }) {
   return (
     <>
       <GlobalStyle />
       <StickyContainer>
         <Header showMenu={showMenu} />
-        {showMenu && <Menu />}
+        {showMenu && routes && <Menu routes={routes} />}
         <main>{children}</main>
       </StickyContainer>
     </>

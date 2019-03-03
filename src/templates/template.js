@@ -7,10 +7,13 @@ import renderNodes from "./node-renderer"
 
 import { Wrapper, Content, Codebox } from "./style"
 
+import routes from "../routes"
+
 function Template({
   data: {
     content: { htmlAst },
   },
+  location: { pathname },
 }) {
   const content = []
   const codebox = []
@@ -29,7 +32,10 @@ function Template({
     content.push(child)
   })
   return (
-    <Layout showMenu>
+    <Layout
+      showMenu
+      routes={routes.filter(route => route.pathname == pathname)}
+    >
       <Wrapper>
         <Content>{renderNodes(content)}</Content>
         <Codebox>{renderNodes(codebox)}</Codebox>

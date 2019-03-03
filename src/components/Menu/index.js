@@ -1,6 +1,7 @@
 import React from "react"
-
 import BurgerMenu from "react-burger-menu"
+
+import MenuLink from "./components/MenuLink"
 
 import { style, styleResponsive } from "./style"
 
@@ -26,6 +27,33 @@ class Menu extends React.Component {
     const Menu = BurgerMenu["slide"]
 
     const { docked } = this.state
+
+    const { routes } = this.props
+
+    console.log("routes", routes)
+
+    const items = []
+
+    routes.map(route => {
+      items.push(
+        <MenuLink key={route.pathname} text={route.api} to={route.pathname} />
+      )
+      route.content.map(({ parent, children, pathname }) => {
+        items.push(<span key={parent}>{parent}</span>)
+        children.map(child => {
+          items.push(
+            <MenuLink
+              key={child.pathname}
+              text={child.name}
+              to={route.pathname + pathname + child.pathname}
+            />
+          )
+        })
+      })
+    })
+
+    console.log("test", items)
+
     return (
       <Menu
         id={"slide"}
@@ -34,17 +62,7 @@ class Menu extends React.Component {
         isOpen={docked}
         noOverlay
       >
-        <span id="home" className="menu-item" href="/">
-          Home
-        </span>
-
-        <span id="about" className="menu-item" href="/about">
-          About
-        </span>
-
-        <span id="contact" className="menu-item" href="/contact">
-          Contact
-        </span>
+        {items}
       </Menu>
     )
   }
