@@ -62,7 +62,7 @@ const routes = [
         ],
       },
       {
-        name: "Geographic",
+        parent: "Geographic",
         pathname: "/geographic",
         children: [
           {
@@ -80,7 +80,7 @@ const routes = [
         ],
       },
       {
-        name: "Partner",
+        parent: "Partner",
         pathname: "/partner",
         children: [
           {
@@ -90,7 +90,7 @@ const routes = [
         ],
       },
       {
-        name: "Shipment",
+        parent: "Shipment",
         pathname: "/shipment",
         children: [
           {

@@ -30,8 +30,6 @@ class Menu extends React.Component {
 
     const { routes } = this.props
 
-    console.log("routes", routes)
-
     const items = []
 
     routes.map(route => {
@@ -52,7 +50,7 @@ class Menu extends React.Component {
       })
     })
 
-    console.log("test", items)
+    console.log("items", items)
 
     return (
       <Menu
