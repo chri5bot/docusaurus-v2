@@ -6,7 +6,6 @@ export const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Lato');
 
     html {
-        color: rgb(51,51,51);
         font-family: 'Lato', sans-serif;
         font-size: 15px;
         line-height: 22px;

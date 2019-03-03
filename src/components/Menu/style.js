@@ -1,4 +1,7 @@
 export const styleResponsive = {
+  bmMenuWrapp: {
+    width: "200px",
+  },
   bmBurgerButton: {
     position: "fixed",
     width: "25px",
@@ -44,6 +47,7 @@ export const style = {
     backgroundImage: "linear-gradient(#008de6, #18b0f7, #00659c)",
     padding: "2.5em 1.5em 0",
     fontSize: "1.15em",
+    width: "200px",
   },
   bmMorphShape: {
     fill: "#373a47",
