@@ -31,10 +31,12 @@ function Template({
 
     content.push(child)
   })
+
+  const routePathname = "/" + pathname.split("/")[1]
   return (
     <Layout
       showMenu
-      routes={routes.filter(route => route.pathname == pathname)}
+      routes={routes.filter(route => route.pathname == routePathname)}
     >
       <Wrapper>
         <Content>{renderNodes(content)}</Content>

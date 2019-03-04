@@ -1,3 +1,6 @@
+import styled from "styled-components"
+import { Link } from "gatsby"
+
 export const styleResponsive = {
   bmMenuWrapp: {
     width: "200px",
@@ -60,3 +63,18 @@ export const style = {
     outline: "none",
   },
 }
+
+export const MenuLink = styled(Link)`
+  color: #ccc;
+  text-decoration: none;
+`
+
+export const SubmenuLink = styled(Link)`
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 20px;
+`
+
+export const TitleMenu = styled.span`
+  color: #ccc;
+`
