@@ -48,7 +48,7 @@ export const style = {
   },
   bmMenu: {
     backgroundImage: "linear-gradient(#008de6, #18b0f7, #00659c)",
-    padding: "2.5em 1.5em 0",
+    padding: "1.5em 1.5em 0",
     fontSize: "1.15em",
     width: "200px",
   },
@@ -61,6 +61,7 @@ export const style = {
   bmItem: {
     display: "flex",
     outline: "none",
+    fontSize: "14px",
   },
 }
 

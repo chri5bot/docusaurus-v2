@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 
 import renderNodes from "./node-renderer"
 
-import { Wrapper, Content, Codebox } from "./style"
+import { Wrapper, Content, Codebox, EmptyDiv } from "./style"
 
 import routes from "../routes"
 
@@ -39,6 +39,7 @@ function Template({
       routes={routes.filter(route => route.pathname == routePathname)}
     >
       <Wrapper>
+        <EmptyDiv />
         <Content>{renderNodes(content)}</Content>
         <Codebox>{renderNodes(codebox)}</Codebox>
       </Wrapper>
